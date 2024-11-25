@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: a1827c13577cd6244b197fa71baa3224
+  productGUID: eb4c9db13763983498a3fcb907ea0fdf
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: My project (2)
+  productName: cabin interior
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -677,14 +677,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: My project (2)
+  metroPackageName: cabin interior
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: My project (2)
+  metroApplicationDescription: cabin interior
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -754,11 +754,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: f9d6020a-0cde-49a3-8131-9ed600eb1e4f
+  cloudProjectId: 3c18f0ac-dfa3-4baa-a191-08c5abd969e5
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: My project (2) 2024-11-13_18-17-59
-  organizationId: noxisceptic
+  projectName: cabin interior
+  organizationId: nehakotturu
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
