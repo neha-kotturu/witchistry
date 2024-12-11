@@ -1,0 +1,445 @@
+{
+	"FunctionalGroups":[
+		{
+			"name": "Alkane",
+			"atoms": ["C", "C", "H", "H", "H", "H", "R1", "R2"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 1},
+				{"atom1": 0, "atom2": 2, "type": 1},
+				{"atom1": 0, "atom2": 3, "type": 1},
+				{"atom1": 0, "atom2": 6, "type": 1},
+				{"atom1": 1, "atom2": 4, "type": 1},
+				{"atom1": 1, "atom2": 5, "type": 1},
+				{"atom1": 1, "atom2": 7, "type": 1}
+			],
+			"children": []
+		},
+		{
+			"name": "Alkene",
+			"atoms": ["C", "C", "R1", "R2", "R3", "R4"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 2},
+				{"atom1": 0, "atom2": 2, "type": 1},
+				{"atom1": 0, "atom2": 3, "type": 1},
+				{"atom1": 1, "atom2": 4, "type": 1},
+				{"atom1": 1, "atom2": 5, "type": 1}
+			],
+			"children": ["Arene"]
+		},
+		{
+			"name": "Alkyne",
+			"atoms": ["C", "C", "R1", "R2"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 3},
+				{"atom1": 0, "atom2": 2, "type": 1},
+				{"atom1": 1, "atom2": 3, "type": 1}
+			],
+			"children": []
+		},
+		{
+			"name": "Arene",
+			"atoms": ["C", "C", "C", "C", "C", "C", "R1", "R2", "R3", "R4", "R5", "R6"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 2},
+				{"atom1": 1, "atom2": 2, "type": 1},
+				{"atom1": 2, "atom2": 3, "type": 2},
+				{"atom1": 3, "atom2": 4, "type": 1},
+				{"atom1": 4, "atom2": 5, "type": 2},
+				{"atom1": 5, "atom2": 0, "type": 1},
+				{"atom1": 0, "atom2": 6, "type": 1},
+				{"atom1": 1, "atom2": 7, "type": 1},
+				{"atom1": 2, "atom2": 8, "type": 1},
+				{"atom1": 3, "atom2": 9, "type": 1},
+				{"atom1": 4, "atom2": 10, "type": 1},
+				{"atom1": 5, "atom2": 11, "type": 1}
+			],
+			"children": []
+		},
+		{
+			"name": "Methyl",
+			"atoms": ["C", "H", "H", "H", "R"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 1},
+				{"atom1": 0, "atom2": 2, "type": 1},
+				{"atom1": 0, "atom2": 3, "type": 1},
+				{"atom1": 0, "atom2": 4, "type": 1}
+			],
+			"children": []
+		},
+		{
+			"name": "Haloalkane",
+			"atoms": ["R", "X"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 1}
+			],
+			"children": []
+		},
+		{
+			"name": "Aldehyde",
+			"atoms": ["H", "C", "O", "R"],
+			"bonds": [
+				{"atom1": 1, "atom2": 2, "type": 2},
+				{"atom1": 1, "atom2": 0, "type": 1},
+				{"atom1": 1, "atom2": 3, "type": 1}
+			],
+			"children": []
+		},
+		{
+			"name": "Carboxylic Acid",
+			"atoms": ["O", "C", "O", "R", "H"],
+			"bonds": [
+				{"atom1": 1, "atom2": 2, "type": 2},
+				{"atom1": 1, "atom2": 0, "type": 1},
+				{"atom1": 1, "atom2": 3, "type": 1},
+				{"atom1": 0, "atom2": 4, "type": 1}
+			],
+			"children": []
+		},
+		{
+			"name": "Ketone",
+			"atoms": ["R1", "C", "O", "R2"],
+			"bonds": [
+				{"atom1": 1, "atom2": 2, "type": 2},
+				{"atom1": 1, "atom2": 0, "type": 1},
+				{"atom1": 1, "atom2": 3, "type": 1}
+			],
+			"children": ["Aldehyde", "Carboxylic Acid", "Acid Anhydride", "Acyl Halide", "Ester"]
+		},
+		{
+			"name": "Acid Anhydride",
+			"atoms": ["C", "C", "O", "O", "O", "R1", "R2"],
+			"bonds": [
+				{"atom1": 0, "atom2": 2, "type": 2},
+				{"atom1": 0, "atom2": 3, "type": 1},
+				{"atom1": 0, "atom2": 5, "type": 1},
+				{"atom1": 1, "atom2": 4, "type": 2},
+				{"atom1": 1, "atom2": 3, "type": 1},
+				{"atom1": 1, "atom2": 6, "type": 1}
+			],
+			"children": []
+		},
+		{
+			"name": "Alcohol",
+			"atoms": ["H", "O", "R"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 1},
+				{"atom1": 1, "atom2": 2, "type": 1}
+			],
+			"children": []
+		},
+		{
+			"name": "Acyl Halide",
+			"atoms": ["C", "O", "R", "X"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 2},
+				{"atom1": 0, "atom2": 2, "type": 1},
+				{"atom1": 0, "atom2": 3, "type": 1}
+			],
+			"children": []
+		},
+		{
+			"name": "Ester",
+			"atoms": ["C", "O", "O", "R1", "R2"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 2},
+				{"atom1": 0, "atom2": 2, "type": 1},
+				{"atom1": 0, "atom2": 3, "type": 1},
+				{"atom1": 2, "atom2": 4, "type": 1}
+			],
+			"children": ["Carboxylic Acid"]
+		},
+		{
+			"name": "Ether",
+			"atoms": ["O", "R1", "R2"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 1},
+				{"atom1": 0, "atom2": 2, "type": 1}
+			],
+			"children": ["Alcohol", "Epoxide"]
+		},
+		{
+			"name": "Epoxide",
+			"atoms": ["C", "C", "O", "R1", "R2", "R3", "R4"],
+			"bonds": [
+				{"atom1": 0, "atom2": 3, "type": 1},
+				{"atom1": 0, "atom2": 4, "type": 1},
+				{"atom1": 0, "atom2": 2, "type": 1},
+				{"atom1": 0, "atom2": 1, "type": 1},
+				{"atom1": 1, "atom2": 2, "type": 1},
+				{"atom1": 1, "atom2": 5, "type": 1},
+				{"atom1": 1, "atom2": 6, "type": 1}
+			],
+			"children": []
+		},
+		{
+			"name": "Amine",
+			"atoms": ["N", "R1", "R2", "R3"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 1},
+				{"atom1": 0, "atom2": 2, "type": 1},
+				{"atom1": 0, "atom2": 3, "type": 1}
+			],
+			"children": ["Nitrate", "Nitro"]
+		},
+		{
+			"name": "Amide",
+			"atoms": ["C", "O", "N", "R", "H", "H"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 2},
+				{"atom1": 0, "atom2": 2, "type": 1},
+				{"atom1": 0, "atom2": 3, "type": 1},
+				{"atom1": 2, "atom2": 4, "type": 1},
+				{"atom1": 2, "atom2": 5, "type": 1}
+			],
+			"children": []
+		},
+		{
+			"name": "Nitrate",
+			"atoms": ["N", "O", "O", "O", "R"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 2},
+				{"atom1": 0, "atom2": 2, "type": 1},
+				{"atom1": 0, "atom2": 3, "type": 1},
+				{"atom1": 2, "atom2": 4, "type": 1}
+			],
+			"children": []
+		},
+		{
+			"name": "Nitrite",
+			"atoms": ["N", "O", "O", "R"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 2},
+				{"atom1": 0, "atom2": 2, "type": 1},
+				{"atom1": 2, "atom2": 3, "type": 1}
+			],
+			"children": []
+		},
+		{
+			"name": "Nitrile",
+			"atoms": ["N", "C", "R"],
+			"bonds": [
+				{"atom1": 1, "atom2": 0, "type": 3},
+				{"atom1": 1, "atom2": 2, "type": 1}
+			],
+			"children": ["Cyanate", "Thiocyanate"]
+		},
+		{
+			"name": "Nitro",
+			"atoms": ["N", "O", "O", "R"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 2},
+				{"atom1": 0, "atom2": 2, "type": 1},
+				{"atom1": 0, "atom2": 3, "type": 1}
+			],
+			"children": []
+		},
+		{
+			"name": "Nitroso",
+			"atoms": ["N", "O", "R"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 2},
+				{"atom1": 0, "atom2": 2, "type": 1}
+			],
+			"children": ["Nitrite"]
+		},
+		{
+			"name": "Imine",
+			"atoms": ["C", "N", "R1", "R2", "R3"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 2},
+				{"atom1": 0, "atom2": 2, "type": 1},
+				{"atom1": 0, "atom2": 3, "type": 1},
+				{"atom1": 1, "atom2": 4, "type": 1}
+			],
+			"children": ["Imide"]
+		},
+		{
+			"name": "Imide",
+			"atoms": ["N", "C", "C", "O", "O", "R1", "R2", "R3"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 1},
+				{"atom1": 0, "atom2": 2, "type": 1},
+				{"atom1": 0, "atom2": 5, "type": 1},
+				{"atom1": 1, "atom2": 3, "type": 2},
+				{"atom1": 2, "atom2": 4, "type": 2},
+				{"atom1": 1, "atom2": 6, "type": 1},
+				{"atom1": 2, "atom2": 7, "type": 1}
+			],
+			"children": []
+		},
+		{
+			"name": "Azide",
+			"atoms": ["N", "N", "N", "R"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 2},
+				{"atom1": 0, "atom2": 2, "type": 2},
+				{"atom1": 1, "atom2": 3, "type": 1}
+			],
+			"children": []
+		},
+		{
+			"name": "Cyanate",
+			"atoms": ["C", "O", "N", "R"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 1},
+				{"atom1": 0, "atom2": 2, "type": 3},
+				{"atom1": 1, "atom2": 3, "type": 1}
+			],
+			"children": []
+		},
+		{
+			"name": "Isocyanate",
+			"atoms": ["C", "O", "N", "R"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 2},
+				{"atom1": 0, "atom2": 2, "type": 2},
+				{"atom1": 2, "atom2": 3, "type": 1}
+			],
+			"children": []
+		},
+		{
+			"name": "Azo Compound",
+			"atoms": ["N", "N", "R1", "R2"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 2},
+				{"atom1": 0, "atom2": 2, "type": 1},
+				{"atom1": 1, "atom2": 3, "type": 1}
+			],
+			"children": ["Azide"]
+		},
+		{
+			"name": "Thiol",
+			"atoms": ["S", "H", "R"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 1},
+				{"atom1": 0, "atom2": 2, "type": 1}
+			],
+			"children": []
+		},
+		{
+			"name": "Sulfide",
+			"atoms": ["S", "R1", "R2"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 1},
+				{"atom1": 0, "atom2": 2, "type": 1}
+			],
+			"children": ["Thiol", "Disulfide", "Thiocyanate"]
+		},
+		{
+			"name": "Disulfide",
+			"atoms": ["S", "S", "R1", "R2"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 1},
+				{"atom1": 0, "atom2": 2, "type": 1},
+				{"atom1": 1, "atom2": 3, "type": 1}
+			],
+			"children": []
+		},
+		{
+			"name": "Sulfoxide",
+			"atoms": ["S", "O", "R1", "R2"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 2},
+				{"atom1": 0, "atom2": 2, "type": 1},
+				{"atom1": 0, "atom2": 3, "type": 1}
+			],
+			"children": ["Sulfinic Acid"]
+		},
+		{
+			"name": "Sulfone",
+			"atoms": ["S", "O", "O", "R1", "R2"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 2},
+				{"atom1": 0, "atom2": 2, "type": 2},
+				{"atom1": 0, "atom2": 3, "type": 1},
+				{"atom1": 0, "atom2": 4, "type": 1}
+			],
+			"children": ["Sulfonic Acid", "Sulfonate Ester"]
+		},
+		{
+			"name": "Sulfinic Acid",
+			"atoms": ["S", "O", "O", "R", "H"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 2},
+				{"atom1": 0, "atom2": 2, "type": 1},
+				{"atom1": 0, "atom2": 3, "type": 1},
+				{"atom1": 2, "atom2": 4, "type": 1}
+			],
+			"children": []
+		},
+		{
+			"name": "Sulfonic Acid",
+			"atoms": ["S", "O", "O", "O", "R", "H"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 2},
+				{"atom1": 0, "atom2": 2, "type": 2},
+				{"atom1": 0, "atom2": 3, "type": 1},
+				{"atom1": 0, "atom2": 4, "type": 1},
+				{"atom1": 3, "atom2": 5, "type": 1}
+			],
+			"children": []
+		},
+		{
+			"name": "Sulfonate Ester",
+			"atoms": ["S", "O", "O", "O", "R1", "R2"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 2},
+				{"atom1": 0, "atom2": 2, "type": 2},
+				{"atom1": 0, "atom2": 3, "type": 1},
+				{"atom1": 0, "atom2": 4, "type": 1},
+				{"atom1": 3, "atom2": 5, "type": 1}
+			],
+			"children": []
+		},
+		{
+			"name": "Thiocyanate",
+			"atoms": ["C", "S", "N", "R"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 1},
+				{"atom1": 0, "atom2": 2, "type": 3},
+				{"atom1": 1, "atom2": 3, "type": 1}
+			],
+			"children": []
+		},
+		{
+			"name": "Isothiocyanate",
+			"atoms": ["C", "S", "N", "R"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 2},
+				{"atom1": 0, "atom2": 2, "type": 2},
+				{"atom1": 2, "atom2": 3, "type": 1}
+			],
+			"children": []
+		},
+		{
+			"name": "Thial",
+			"atoms": ["H", "C", "S", "R"],
+			"bonds": [
+				{"atom1": 1, "atom2": 2, "type": 2},
+				{"atom1": 1, "atom2": 0, "type": 1},
+				{"atom1": 1, "atom2": 3, "type": 1}
+			],
+			"children": []
+		},
+		{
+			"name": "Thioketone",
+			"atoms": ["S", "C", "R1", "R2"],
+			"bonds": [
+				{"atom1": 1, "atom2": 0, "type": 2},
+				{"atom1": 1, "atom2": 2, "type": 1},
+				{"atom1": 1, "atom2": 3, "type": 1}
+			],
+			"children": ["Thial"]
+		},
+		{
+			"name": "Phosphine",
+			"atoms": ["P", "R1", "R2", "R3"],
+			"bonds": [
+				{"atom1": 0, "atom2": 1, "type": 1},
+				{"atom1": 0, "atom2": 2, "type": 1},
+				{"atom1": 0, "atom2": 3, "type": 1}
+			],
+			"children": []
+		}
+	]
+}
