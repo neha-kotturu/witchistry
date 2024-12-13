@@ -8,4 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Cabin/Demo.unity
     guid: 87f6424a65482154da4cd74381650bd3
+  - enabled: 1
+    path: Assets/SkythianCat/Sunny_Village_LITE/DEMO/Demo_scene.unity
+    guid: 3bddb64cd9b5b1e4abb9f985b778a4c3
   m_configObjects: {}
