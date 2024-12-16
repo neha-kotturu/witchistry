@@ -35,16 +35,14 @@ public class Inventory : MonoBehaviour
         {
             inventory[key] = inventory[key] + amount;
         }
-        Debug.Log("Added 1 Item: " + inventory[key]);
-
-        // Update text on inventory screen
+        // Debug.Log("Added 1 item, total now: " + inventory[key]);
         UpdateInventoryGUI();
     }
 
+    // Update text on inventory screen (when player holds TAB)
     void UpdateInventoryGUI()
     {
         inventoryContents.text = "";
-        // Update text on inventory screen
         foreach(KeyValuePair<string, int> item in inventory)
         {
             inventoryContents.text += item.Key;
