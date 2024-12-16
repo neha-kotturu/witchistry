@@ -2,16 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Aloe : Interactable
+public class Aloe : Interactable //
 {
-    public GameObject aloeOnPlayer;
+    public GameObject aloeOnPlayer; //
     private PlayerInteract playerInteract;
-    // Start is called before the first frame update
+    public Inventory inventory;
+
+
     void Start()
     {
-        promptMessage = "Collect Aloe [E]";
+        inventory = FindObjectOfType<Inventory>();
+        plantID = "Aloe"; //
+        promptMessage = "Collect Aloe [E]"; //
         this.gameObject.SetActive(true);
-        aloeOnPlayer.SetActive(false);
+        aloeOnPlayer.SetActive(false); //
         GameObject player = GameObject.Find("Player");
         if (player != null) {
             playerInteract = player.GetComponent<PlayerInteract>();
@@ -23,6 +27,7 @@ public class Aloe : Interactable
     {
         playerInteract.hideAllItemsOnPlayer();
         this.gameObject.SetActive(false);
-        aloeOnPlayer.SetActive(true);
+        aloeOnPlayer.SetActive(true); //
+        inventory.updateItem(plantID, 1);
     }
 }
