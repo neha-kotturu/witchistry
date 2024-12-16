@@ -6,10 +6,14 @@ public class Garlic : Interactable
 {
     public GameObject garlicOnPlayer;
     private PlayerInteract playerInteract;
-    // Start is called before the first frame update
+    public Inventory inventory;
+
+
     void Start()
     {
-        promptMessage = "Collect Garlic [E]";
+        inventory = FindObjectOfType<Inventory>();
+        plantID = "Garlic";
+        promptMessage = "Dig Up Garlic [E]";
         this.gameObject.SetActive(true);
         garlicOnPlayer.SetActive(false);
         GameObject player = GameObject.Find("Player");
@@ -24,5 +28,6 @@ public class Garlic : Interactable
         playerInteract.hideAllItemsOnPlayer();
         this.gameObject.SetActive(false);
         garlicOnPlayer.SetActive(true);
+        inventory.updateItem(plantID, 1);
     }
 }

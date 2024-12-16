@@ -6,10 +6,14 @@ public class Hibiscus : Interactable
 {
     public GameObject hibiscusOnPlayer;
     private PlayerInteract playerInteract;
-    // Start is called before the first frame update
+    public Inventory inventory;
+
+
     void Start()
     {
-        promptMessage = "Pick Hibiscus [E]";
+        inventory = FindObjectOfType<Inventory>();
+        plantID = "Hibiscus";
+        promptMessage = "Collect Hibiscus [E]";
         this.gameObject.SetActive(true);
         hibiscusOnPlayer.SetActive(false);
         GameObject player = GameObject.Find("Player");
@@ -24,5 +28,6 @@ public class Hibiscus : Interactable
         playerInteract.hideAllItemsOnPlayer();
         this.gameObject.SetActive(false);
         hibiscusOnPlayer.SetActive(true);
+        inventory.updateItem(plantID, 1);
     }
 }

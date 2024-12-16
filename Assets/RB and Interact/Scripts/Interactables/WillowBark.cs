@@ -6,10 +6,14 @@ public class WillowBark : Interactable
 {
     public GameObject willowBarkOnPlayer;
     private PlayerInteract playerInteract;
-    // Start is called before the first frame update
+    public Inventory inventory;
+
+
     void Start()
     {
-        promptMessage = "Pickup Willow Branch [E]";
+        inventory = FindObjectOfType<Inventory>();
+        plantID = "Willow Bark";
+        promptMessage = "Pick Up Willow Bark [E]";
         this.gameObject.SetActive(true);
         willowBarkOnPlayer.SetActive(false);
         GameObject player = GameObject.Find("Player");
@@ -24,5 +28,6 @@ public class WillowBark : Interactable
         playerInteract.hideAllItemsOnPlayer();
         this.gameObject.SetActive(false);
         willowBarkOnPlayer.SetActive(true);
+        inventory.updateItem(plantID, 1);
     }
 }

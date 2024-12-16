@@ -6,12 +6,13 @@ public abstract class Interactable : MonoBehaviour
 {
     // message shown to player when looking at interactable
     public string promptMessage;
-
+    public string plantID;
 
     public void BaseInteract()
     {
         Interact();
     }
+
     // Start is called before the first frame update
     protected virtual void Interact()
     {

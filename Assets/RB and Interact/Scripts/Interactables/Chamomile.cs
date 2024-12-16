@@ -6,9 +6,13 @@ public class Chamomile : Interactable
 {
     public GameObject chamomileOnPlayer;
     private PlayerInteract playerInteract;
-    // Start is called before the first frame update
+    public Inventory inventory;
+
+
     void Start()
     {
+        inventory = FindObjectOfType<Inventory>();
+        plantID = "Chamomile";
         promptMessage = "Pick Chamomile [E]";
         this.gameObject.SetActive(true);
         chamomileOnPlayer.SetActive(false);
@@ -24,5 +28,6 @@ public class Chamomile : Interactable
         playerInteract.hideAllItemsOnPlayer();
         this.gameObject.SetActive(false);
         chamomileOnPlayer.SetActive(true);
+        inventory.updateItem(plantID, 1);
     }
 }

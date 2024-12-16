@@ -2,20 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Lavender : Interactable
+public class Peppermint : Interactable
 {
-    public GameObject lavenderOnPlayer;
+    public GameObject peppermintOnPlayer;
     private PlayerInteract playerInteract;
     public Inventory inventory;
-
+    
 
     void Start()
     {
         inventory = FindObjectOfType<Inventory>();
-        plantID = "Lavender";
-        promptMessage = "Pick Lavender [E]";
+        plantID = "Peppermint";
+        promptMessage = "Pick Peppermint [E]";
         this.gameObject.SetActive(true);
-        lavenderOnPlayer.SetActive(false);
+        peppermintOnPlayer.SetActive(false);
         GameObject player = GameObject.Find("Player");
         if (player != null) {
             playerInteract = player.GetComponent<PlayerInteract>();
@@ -27,7 +27,7 @@ public class Lavender : Interactable
     {
         playerInteract.hideAllItemsOnPlayer();
         this.gameObject.SetActive(false);
-        lavenderOnPlayer.SetActive(true);
+        peppermintOnPlayer.SetActive(true);
         inventory.updateItem(plantID, 1);
     }
 }

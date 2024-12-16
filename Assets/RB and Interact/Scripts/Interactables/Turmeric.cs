@@ -6,9 +6,13 @@ public class Turmeric : Interactable
 {
     public GameObject turmericOnPlayer;
     private PlayerInteract playerInteract;
-    // Start is called before the first frame update
+    public Inventory inventory;
+
+
     void Start()
     {
+        inventory = FindObjectOfType<Inventory>();
+        plantID = "Turmeric";
         promptMessage = "Dig Up Turmeric [E]";
         this.gameObject.SetActive(true);
         turmericOnPlayer.SetActive(false);
@@ -24,5 +28,6 @@ public class Turmeric : Interactable
         playerInteract.hideAllItemsOnPlayer();
         this.gameObject.SetActive(false);
         turmericOnPlayer.SetActive(true);
+        inventory.updateItem(plantID, 1);
     }
 }
